@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrazione Utente</title>
+    <style>
+		body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+#registration-container {
+  width: 50%;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+label {
+  color: #333;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+  #registration-container {
+    width: 80%;
+  }
+  form {
+    grid-template-columns: 1fr;
+  }
+}
+	</style>
+  </head>
+  <body>
+    <div id="registration-container">
+      <h2>Registrazione Utente</h2>
+      <form
+        action="processi/registrazione.php"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="cognome">Cognome:</label>
+        <input type="text" id="cognome" name="cognome" required />
+
+        <label for="indirizzo">Indirizzo:</label>
+        <input type="text" id="indirizzo" name="indirizzo" />
+
+        <label for="data_nascita">Data di Nascita:</label>
+        <input type="date" id="data_nascita" name="data_nascita" />
+
+        <label for="luogo_nascita">Luogo di Nascita:</label>
+        <input type="text" id="luogo_nascita" name="luogo_nascita" />
+
+        <label for="numero_patente">Numero Patente:</label>
+        <input type="text" id="numero_patente" name="numero_patente" />
+
+        <label for="numero_documento_identita"
+          >Numero Documento di Identità:</label
+        >
+        <input
+          type="text"
+          id="numero_documento_identita"
+          name="numero_documento_identita"
+        />
+
+        <label for="data_scadenza_patente">Data di Scadenza Patente:</label>
+        <input
+          type="date"
+          id="data_scadenza_patente"
+          name="data_scadenza_patente"
+        />
+
+        <label for="numero_telefono">Numero di Telefono:</label>
+        <input type="text" id="numero_telefono" name="numero_telefono" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="fotografia">Fotografia:</label>
+        <input type="file" id="fotografia" name="fotografia" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <input type="submit" value="Registrati" />
+      </form>
+    </div>
+  </body>
+</html>

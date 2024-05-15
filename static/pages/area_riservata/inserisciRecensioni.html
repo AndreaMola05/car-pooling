@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Inserimento recensione</title>
+<style>
+	body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    width: 600px; /* Aumenta la larghezza del form */
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+label {
+    color: #007bff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 100px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 10px;
+}
+</style>
+		
+	</head>
+	<body>
+		<div class="container">
+			<h1>inserisci una recensione</h1>
+			<form action="processi/recensione.php" method="post">
+				<label for="ricevente">Chi stai recensendo?</label>
+				<input type="text" name="riceventeNome" id="riceventeNome" placeholder="nome ricevente"/>
+
+				<input type="text" name="riceventeCognome" id="riceventeCognome" placeholder="cognome ricevente"/>
+
+				<label for="giudizio">Giudizio</label>
+				<textarea name="giudizio" id="giudizio" cols="30" rows="10"></textarea>
+
+				<label for="voto">Voto</label>
+				<input type="number" name="voto" id="voto" min="1" max="5" />
+				<br />
+				<br />
+				<input type="submit" value="invia recensione" />
+			</form>
+
+			<a href="../../../index.php">Home page</a>
+			<a href="visualizzaRecensioni.html">Visualizza recensioni</a>
+		</div>
+	</body>
+</html>

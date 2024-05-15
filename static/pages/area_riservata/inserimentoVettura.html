@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>inserimento autoverttura</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f8f9fa;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				
+			}
+			.container {
+				background-color: #fff;
+				border-radius: 8px;
+				padding: 20px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				width: 400px;
+			}
+			h2 {
+				text-align: center;
+				color: #333;
+				margin-bottom: 20px;
+			}
+			form {
+				display: flex;
+				flex-direction: column;
+			}
+			label {
+				margin-bottom: 8px;
+				font-weight: bold;
+			}
+			input[type="text"] {
+				padding: 8px;
+				margin-bottom: 16px;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+			}
+			input[type="submit"] {
+				background-color: #007bff;
+				color: #fff;
+				padding: 10px;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+			input[type="submit"]:hover {
+				background-color: #0056b3;
+			}
+			a {
+				text-decoration: none;
+				color: #007bff;
+				text-align: center;
+				display: block;
+				margin-top: 10px;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h2>Inserisci i dati della vettura</h2>
+			<form action="processi/inserimentoVettura.php" method="post">
+				<label for="targa">Targa</label>
+				<input type="text" name="targa" id="targa" required />
+				<label for="casaProduttrice">casa produttrice</label>
+				<input type="text" name="casaProduttrice" id="casaProduttrice" required />
+				<label for="modello">Modello</label>
+				<input type="text" name="modello" id="modello" required />
+				<label for="numeroPosti">numero posti</label>
+				<input type="text" name="numeroPosti" id="numeroPosti" required />
+				<label for="colore">colore</label>
+				<input type="text" name="colore" id="colore" required />
+				<label for="annoImmatricolazione">anno immatricolazione</label>
+				<input type="text" name="annoImmatricolazione" id="annoImmatricolazione" required />
+				<label for="chilometri">chilometri</label>
+				<input type="text" name="chilometri" id="chilometri" required />
+				<label for="carburante">carburante</label>
+				<input type="text" name="carburante" id="carburante" required />
+				<label for="cilindrata">cilindrata</label>
+				<input type="text" name="cilindrata" id="cilindrata" required />
+				<label for="numeroPatente">Numero di Patente</label>
+				<input type="text" name="numeroPatente" id="numeroPatente" required />
+				<input type="submit" value="Inserisci" />
+			</form>
+			<a href="../../../index.php">Torna indietro</a>
+		</div>
+	</body>
+</html>
